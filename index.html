@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặc sản Bến Tre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i1.wp.com/memories.vn/wp-content/uploads/2018/07/Layer-0-copy.jpg?resize%3D819%252C405%26ssl%3D1');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+        }
+
+        nav.top-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav.top-nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        nav.top-nav a:hover {
+            background-color: #FFD700;
+            color: black;
+            border-radius: 5px;
+        }
+
+        .logo {
+            position: absolute; /* Chỉnh sửa thành absolute */
+            top: 10px; /* Đặt logo cách trên một chút */
+            left: 10px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 1);
+            animation: logoGlow 1.5s infinite alternate ease-in-out;
+            z-index: 1100; /* Đảm bảo logo luôn nằm trên thanh điều hướng */
+        }
+
+        @keyframes logoGlow {
+            0% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); }
+            100% { box-shadow: 0 0 30px rgba(255, 215, 0, 1); }
+        }
+
+        section {
+            margin-top: 100px;
+            padding: 50px;
+        }
+
+        section h2 {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+            animation: fadeIn 2s ease-in-out, glow 2s infinite alternate;
+            color: #FFD700;
+        }
+
+        .intro {
+            font-size: 16px;
+            color: #00008B;
+            margin-top: 15px;
+            max-width: 800px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .dishes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px;
+        }
+
+        .dish {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .dish img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .dish h3 {
+            color: #FFD700;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #FFD700; }
+            100% { text-shadow: 0 0 20px #FFD700; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<img src="images/logo.jpg" alt="Logo" class="logo">
+
+<nav class="top-nav">
+    <a href="index.html">Trang Chủ</a>
+    <a href="keo-dua.html">Kẹo Dừa</a>
+    <a href="banh-xeo-oc-gao.html">Bánh Xèo Ốc Gạo</a>
+    <a href="mut-dua.html">Mứt Dừa</a>
+    <a href="lien-he.html">Liên Hệ</a>
+</nav>
+
+<section>
+    <h2>Chào mừng đến với ẩm thực Bến Tre</h2>
+    <p class="intro">Bến Tre không chỉ nổi tiếng với những hàng dừa xanh bạt ngàn mà còn là thiên đường ẩm thực độc đáo. Nơi đây mang đến những món ăn mang đậm hương vị quê hương, từ những món dân dã như bánh xèo ốc gạo đến đặc sản nổi tiếng như kẹo dừa. Hãy cùng khám phá những hương vị tinh túy của vùng đất này!</p>
+</section>
+
+<section class="dishes">
+    <div class="dish">
+        <img src="images/keo.jfif" alt="Kẹo Dừa">
+        <h3>Kẹo Dừa</h3>
+        <p>Món kẹo truyền thống ngọt ngào, dẻo thơm từ nước cốt dừa.</p>
+    </div>
+    <div class="dish">
+        <img src="http://www.vanhoanghethuat.vn/datasite///201807/BAI_VIET_14705/45-1.jpg" alt="Bánh Xèo Ốc Gạo">
+        <h3>Bánh Xèo Ốc Gạo</h3>
+        <p>Món bánh xèo đặc biệt với nhân ốc gạo béo ngậy.</p>
+    </div>
+    <div class="dish">
+        <img src="images/md7.jpg" alt="Mứt Dừa">
+        <h3>Mứt Dừa</h3>
+        <p>Thưởng thức mứt dừa giòn tan, thơm ngon ngày Tết.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Kẹo Dừa - Bến Tre</p>
+</footer>
+
+</body>
+</html>

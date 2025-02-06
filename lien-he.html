@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ Nhóm</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff77a9, #ffb3d9);
+            color: #5c005c;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: white;
+            background: #ff4081;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: slideInDown 1s ease-out;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #e91e63;
+            padding: 0.8rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #c2185b;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        h2 {
+            color: #e91e63;
+            text-transform: uppercase;
+        }
+
+        .group-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .member {
+            flex: 1 1 calc(33.333% - 2rem);
+            background: #ffe6f2;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .member:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #f8bbd0;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 1rem;
+            background: #f06292;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .contact-form button:hover {
+            background: #e91e63;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #f8bbd0;
+            color: #5c005c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Liên Hệ Với Nhóm</h1>
+        <p>Kết nối với chúng tôi để nhận hỗ trợ tốt nhất!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="keo-dua.html">Kẹo Dừa</a>
+        <a href="banh-xeo-oc-gao.html">Bánh Xèo Ốc Gạo</a>
+        <a href="mut-dua.html">Mứt Dừa</a>
+        <a href="lien-he.html">Liên Hệ</a>
+    </nav>
+
+    <div class="container">
+        <h2>Thông Tin Nhóm</h2>
+        <div class="group-info">
+            <div class="member"><h3>Thạch Thị Liễu</h3><p>Trưởng nhóm</p></div>
+            <div class="member"><h3>Lê Anh Kỳ</h3><p>Thành viên</p></div>
+            <div class="member"><h3>Trần Thị Huyền Trân</h3><p>Thành viên</p></div>
+            <div class="member"><h3>Võ Hoài Bảo</h3><p>Thành viên</p></div>
+        </div>
+        <h2>Form Liên Hệ</h2>
+        <form class="contact-form" action="https://formspree.io/f/manqewvd" method="POST">
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+
+            <label for="message">Nội dung</label>
+            <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung cần liên hệ" required></textarea>
+
+            <button type="submit">Gửi Liên Hệ</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 Nhóm Liên Hệ. Mọi quyền được bảo lưu.
+    </footer>
+</body>
+</html>

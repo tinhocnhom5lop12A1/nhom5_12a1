@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hướng dẫn làm bánh xèo và đặt món ngon tại Bánh Xèo An La Ghien">
+    <meta name="keywords" content="Bánh xèo, món ăn Việt, hướng dẫn nấu ăn">
+    <meta name="author" content="Bánh Xèo Ốc Gạo">
+    <title>Bánh Xèo An La Ghien</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" defer></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero {
+            background: url('https://www.yong.vn/Content/images/foods/banh-xeo-tom-nhay-binh-dinh.jpg') no-repeat center center;
+            background-size: cover;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .hero h1 {
+            color: white;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease-in-out;
+        }
+        .hero h1:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        // Function to handle the form submission for sharing recipes
+        function shareRecipe() {
+            const recipeInput = document.getElementById('recipe-input');
+            const recipeContainer = document.getElementById('recipe-container');
+            const newRecipe = document.createElement('div');
+            newRecipe.classList.add('bg-gray-100', 'p-4', 'rounded-lg', 'mt-4', 'shadow-md');
+            newRecipe.textContent = recipeInput.value;
+            recipeContainer.appendChild(newRecipe);
+            recipeInput.value = ''; // Clear the input field
+        }
+
+        // Function to handle the form submission for comments
+        function submitComment() {
+            const commentInput = document.getElementById('comment-input');
+            const commentContainer = document.getElementById('comment-container');
+            const newComment = document.createElement('div');
+            newComment.classList.add('bg-gray-100', 'p-4', 'rounded-lg', 'mt-4', 'shadow-md');
+            newComment.textContent = commentInput.value;
+            commentContainer.appendChild(newComment);
+            commentInput.value = ''; // Clear the input field
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-green-700 text-white py-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-3xl font-bold">Bánh Xèo Ốc Gạo</h1>
+            <nav>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:text-yellow-300">Trang chủ</a></li>
+                    <li><a href="keo-dua.html" class="hover:text-yellow-300">Kẹo dừa</a></li>
+                    <li><a href="banh-xeo-oc-gao.html" class="hover:text-yellow-300">Bánh xèo ốc gạo</a></li>
+                    <li><a href="mut-dua.html" class="hover:text-yellow-300">Mứt dừa</a></li>
+                    <li><a href="lien-he.html" class="hover:text-yellow-300">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Bánh Xèo - Món Ngon Truyền Thống</h1>
+    </section>
+    
+    <!-- Ingredients Section -->
+    <section id="banh-xeo" class="py-12 bg-white shadow-md rounded-lg m-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Nguyên liệu làm Bánh Xèo</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-700">Phần bột bánh</h3>
+                    <ul class="list-disc text-gray-600 text-lg pl-6">
+                        <li>1 cốc bột gạo</li>
+                        <li>1/2 cốc nước cốt dừa</li>
+                        <li>1/2 thìa cà phê muối</li>
+                        <li>1/2 thìa cà phê bột nghệ</li>
+                        <li>Hành lá thái nhỏ</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-700">Phần nhân</h3>
+                    <ul class="list-disc text-gray-600 text-lg pl-6">
+                        <li>300g tôm tươi</li>
+                        <li>200g thịt ba chỉ</li>
+                        <li>200g giá đỗ</li>
+                        <li>Rau sống các loại</li>
+                        <li>Gia vị: Nước mắm, đường, tỏi, ớt, chanh</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mua Nguyên Liệu Trực Tuyến Section -->
+    <section id="mua-nguyen-lieu" class="py-12 bg-gray-50 shadow-md rounded-lg m-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Mua Nguyên Liệu Trực Tuyến</h2>
+            <p class="text-lg mb-6">Mua nguyên liệu tươi ngon cho Bánh Xèo từ các cửa hàng trực tuyến dưới đây:</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://shopee.vn/search?keyword=bột%20bánh%20xèo" class="bg-green-700 text-white py-2 px-6 rounded-lg hover:bg-green-600">Mua Bột Bánh</a>
+                <a href="https://shopee.vn/search?keyword=tôm%20tươi" class="bg-green-700 text-white py-2 px-6 rounded-lg hover:bg-green-600">Mua Tôm</a>
+                <a href="https://shopee.vn/search?keyword=thịt%20ba%20chỉ" class="bg-green-700 text-white py-2 px-6 rounded-lg hover:bg-green-600">Mua Thịt Ba Chỉ</a>
+                <a href="https://shopee.vn/search?keyword=giá%20đỗ" class="bg-green-700 text-white py-2 px-6 rounded-lg hover:bg-green-600">Mua Giá Đỗ</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Hướng Dẫn Section -->
+    <section id="video-huong-dan" class="py-12 bg-white shadow-md rounded-lg m-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Video Hướng Dẫn Nấu Bánh Xèo</h2>
+            <div class="flex justify-center mb-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/10C6cbKv7cc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-700 mb-4">Hình ảnh minh họa</h3>
+            <img src="https://www.yong.vn/Content/images/foods/banh-xeo-tom-nhay-binh-dinh.jpg" alt="Bánh Xèo" class="mx-auto rounded-lg shadow-md">
+        </div>
+
+<!-- Bình luận -->
+        <div class="comments-section">
+            <h2>Bình luận và chia sẻ công thức</h2>
+            <form id="commentForm">
+                <textarea id="commentInput" rows="4" placeholder="Chia sẻ công thức hoặc ý kiến của bạn..." required></textarea>
+                <button type="submit">Gửi Bình Luận</button>
+            </form>
+            <div id="commentsList" class="comments-list">
+                <!-- Các bình luận sẽ được thêm vào đây -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // Lắng nghe sự kiện gửi bình luận
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const commentInput = document.getElementById('commentInput');
+            const commentText = commentInput.value;
+            
+            if (commentText) {
+                const commentList = document.getElementById('commentsList');
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.innerHTML = `<p class="author">Người dùng</p><p class="content">${commentText}</p>`;
+                commentList.appendChild(newComment);
+                commentInput.value = ''; // Xóa nội dung đã nhập
+            }
+        });
+    </script>
+</body>
+</html>
